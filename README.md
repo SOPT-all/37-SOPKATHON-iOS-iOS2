@@ -1,0 +1,2 @@
+# 37-SOPKATHON-iOS-iOS2
+37기 솝커톤 iOS 2팀
