@@ -17,8 +17,13 @@ class SaveViewController: BaseViewController {
         $0.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func setStyle() {
         self.view.backgroundColor = .white
+        tableView.separatorStyle = .none
     }
     
     override func setUI() {
@@ -39,6 +44,11 @@ class SaveViewController: BaseViewController {
     override func setAction() {
         
     }
+    
+    private func pushToDetail() {
+        let detailVC = SaveDetailViewController()
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 extension SaveViewController: UITableViewDataSource {
@@ -52,6 +62,10 @@ extension SaveViewController: UITableViewDataSource {
         let model = savedPlaces[indexPath.row]
         cell.configure(with: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
     }
 }
 
@@ -68,6 +82,11 @@ extension SaveViewController: UITableViewDelegate {
             
             tableView.endUpdates()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = savedPlaces[indexPath.row]
+        pushToDetail()
     }
 }
 

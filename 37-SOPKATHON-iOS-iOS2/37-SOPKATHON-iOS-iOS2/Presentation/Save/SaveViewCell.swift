@@ -45,6 +45,7 @@ final class SaveViewCell: UITableViewCell, ReuseIdentifiable {
         saveImage.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
+            $0.width.height.equalTo(70)
         }
         
         saveName.snp.makeConstraints {
