@@ -42,8 +42,8 @@ extension MainTab {
     var viewController: UIViewController {
         switch self {
         case .home: return HomeViewController()
-        case .search: return SearchViewController()
-        case .save: return SaveViewController()
+        case .search: return HomeViewController()
+        case .save: return HomeViewController()
         }
     }
 }

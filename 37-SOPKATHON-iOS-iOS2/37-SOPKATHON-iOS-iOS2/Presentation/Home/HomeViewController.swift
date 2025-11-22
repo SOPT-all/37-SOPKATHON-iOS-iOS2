@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SafariServices
 
 import SnapKit
 import Then
 
 final class HomeViewController: BaseViewController {
     
+    private var mockLists: [Home] = []
     //MARK: - UI
     
     private let logoImage = UIImageView()
@@ -20,7 +22,14 @@ final class HomeViewController: BaseViewController {
     private let articleLabel = UILabel()
     private let articleButton = UIButton()
     private let articleTitleLabel = UILabel()
-//    private var 네비게이션 바
+    
+    //연결 주소
+    private var articleURL: URL? = URL(string: "https://www.amc.seoul.kr/asan/healthinfo/disease/diseaseDetail.do?contentId=31545")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadMockData()
+    }
     
     override func setUI() {
         self.view.addSubviews(logoImage, santaImage, articleLabel, articleButton, articleTitleLabel)
@@ -48,6 +57,7 @@ final class HomeViewController: BaseViewController {
             $0.layer.borderColor = UIColor.black.cgColor
             $0.layer.borderWidth = 1
             $0.layer.cornerRadius = 10
+            $0.addTarget(self, action: #selector(didTapArticleButton), for: .touchUpInside)
         }
         
         articleTitleLabel.do {
@@ -87,10 +97,24 @@ final class HomeViewController: BaseViewController {
             $0.leading.equalToSuperview().offset(19.5)
             $0.height.equalTo(21)
         }
-
     }
+    
+    private func loadMockData() {
+        self.mockLists = mockDatas
+        guard let mock = mockLists.first else {return}
+        articleTitleLabel.text = mock.title
+        articleURL = URL(string: mock.link)
+    }
+    
+    @objc
+        private func didTapArticleButton() {
+            guard let url = articleURL else { return }
+            
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true)
+        }
 }
 
 #Preview {
-    HomeViewController()
+    Tabbar()
 }
