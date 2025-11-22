@@ -11,6 +11,7 @@
 		4BB9F2122ED2322000407C32 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2112ED2322000407C32 /* SearchViewController.swift */; };
 		4BB9F2152ED235A400407C32 /* SearchHotplaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */; };
 		4BB9F27D2ED2693600407C32 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F27C2ED2693600407C32 /* ResultViewController.swift */; };
+		4BB9F2812ED26DF500407C32 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2802ED26DF500407C32 /* MapView.swift */; };
 		AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE175FE02ED22A41002678BA /* HomeViewController.swift */; };
 		AE1760392ED23F75002678BA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1760382ED23F6E002678BA /* HomeModel.swift */; };
 		F68508432ED255B200CEBD2C /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */; };
@@ -52,9 +53,6 @@
 		F779BB4D2ED22A2000F4A161 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */; };
 		F779BB4F2ED22ACA00F4A161 /* SaveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */; };
 		F779BB862ED2314800F4A161 /* SaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB852ED2314800F4A161 /* SaveModel.swift */; };
-		F779BB4D2ED22A2000F4A161 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */; };
-		F779BB4F2ED22ACA00F4A161 /* SaveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */; };
-		F779BB862ED2314800F4A161 /* SaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB852ED2314800F4A161 /* SaveModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,11 +60,7 @@
 		4BB9F2112ED2322000407C32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotplaceResponse.swift; sourceTree = "<group>"; };
 		4BB9F27C2ED2693600407C32 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		AE175FE02ED22A41002678BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AE1760382ED23F6E002678BA /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		4BB9F20C2ED22AB300407C32 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		4BB9F2112ED2322000407C32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotplaceResponse.swift; sourceTree = "<group>"; };
+		4BB9F2802ED26DF500407C32 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		AE175FE02ED22A41002678BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE1760382ED23F6E002678BA /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
@@ -104,9 +98,6 @@
 		F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
 		F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchViewController.swift; sourceTree = "<group>"; };
 		F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSaveViewController.swift; sourceTree = "<group>"; };
-		F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
-		F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewCell.swift; sourceTree = "<group>"; };
-		F779BB852ED2314800F4A161 /* SaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveModel.swift; sourceTree = "<group>"; };
 		F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewCell.swift; sourceTree = "<group>"; };
 		F779BB852ED2314800F4A161 /* SaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveModel.swift; sourceTree = "<group>"; };
@@ -156,52 +147,23 @@
 			isa = PBXGroup;
 			children = (
 				4BB9F2112ED2322000407C32 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4BB9F27E2ED26CBC00407C32 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
 				4BB9F27C2ED2693600407C32 /* ResultViewController.swift */,
 			);
-			path = ViewController;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		AE175FDF2ED229A5002678BA /* Home */ = {
+		4BB9F27F2ED26D9E00407C32 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				AE175FE02ED22A41002678BA /* HomeViewController.swift */,
-				AE1760382ED23F6E002678BA /* HomeModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		4BB9F2092ED229F400407C32 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2102ED231F900407C32 /* ViewController */,
-				4BB9F20F2ED231ED00407C32 /* View */,
-				4BB9F20E2ED231E100407C32 /* Model */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		4BB9F20E2ED231E100407C32 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4BB9F20F2ED231ED00407C32 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F20C2ED22AB300407C32 /* SearchCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4BB9F2102ED231F900407C32 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2112ED2322000407C32 /* SearchViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		AE175FDF2ED229A5002678BA /* Home */ = {
@@ -218,6 +180,7 @@
 			children = (
 				F6EDED162ED0DAA1008A6AB5 /* 37-SOPKATHON-iOS-iOS2 */,
 				F6EDECF62ED0DA8F008A6AB5 /* Products */,
+				4BB9F27E2ED26CBC00407C32 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,8 +303,9 @@
 		F6EDEF082ED195CB008A6AB5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4BB9F27F2ED26D9E00407C32 /* Search */,
 			);
-			path = API;
+			name = API;
 			sourceTree = "<group>";
 		};
 		F6EDEF0C2ED195CB008A6AB5 /* Foundation */ = {
@@ -374,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				F68508462ED2579900CEBD2C /* UVCard.swift */,
+				4BB9F2802ED26DF500407C32 /* MapView.swift */,
 				F68508442ED255CA00CEBD2C /* CardType.swift */,
 				F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */,
 				F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */,
@@ -381,13 +346,7 @@
 				F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */,
 				F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */,
 				F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */,
-				F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */,
-				F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */,
-				F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */,
-				F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */,
-				F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */,
 			);
-			path = Component;
 			path = Component;
 			sourceTree = "<group>";
 		};
@@ -502,6 +461,7 @@
 				4BB9F20D2ED22AB300407C32 /* SearchCell.swift in Sources */,
 				F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */,
 				F6EDEF4E2ED22E67008A6AB5 /* MainTab.swift in Sources */,
+				4BB9F2812ED26DF500407C32 /* MapView.swift in Sources */,
 				4BB9F2122ED2322000407C32 /* SearchViewController.swift in Sources */,
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
 				AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */,
