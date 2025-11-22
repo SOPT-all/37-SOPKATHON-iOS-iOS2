@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class SearchViewCotroller: BaseViewController {
+final class SearchViewController: BaseViewController {
     
     var searchHotplace: [SearchHotplaceResponse] = []
 
@@ -49,7 +49,7 @@ final class SearchViewCotroller: BaseViewController {
 }
 
 
-extension SearchViewCotroller: UITableViewDataSource, UITableViewDelegate {
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchHotplace.count
     }
@@ -65,12 +65,12 @@ extension SearchViewCotroller: UITableViewDataSource, UITableViewDelegate {
 }
 
 
-extension SearchViewCotroller: UISearchControllerDelegate {
+extension SearchViewController: UISearchControllerDelegate {
     
 }
 
 
 #Preview {
     
-    SearchViewCotroller()
+    SearchViewController()
 }
