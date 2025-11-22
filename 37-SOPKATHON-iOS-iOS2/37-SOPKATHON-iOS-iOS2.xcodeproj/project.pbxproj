@@ -35,6 +35,9 @@
 		F6EDEF1F2ED19658008A6AB5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEF1E2ED19658008A6AB5 /* Moya */; };
 		F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */; };
 		F6EDEF492ED22564008A6AB5 /* NSAtrributedString+.swift in Resources */ = {isa = PBXBuildFile; fileRef = F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */; };
+		F779BB4D2ED22A2000F4A161 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */; };
+		F779BB4F2ED22ACA00F4A161 /* SaveViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */; };
+		F779BB862ED2314800F4A161 /* SaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F779BB852ED2314800F4A161 /* SaveModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
 		F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAtrributedString+.swift"; sourceTree = "<group>"; };
+		F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
+		F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewCell.swift; sourceTree = "<group>"; };
+		F779BB852ED2314800F4A161 /* SaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		F6EDED212ED0DB78008A6AB5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F779BB4B2ED22A1200F4A161 /* Save */,
 				F6EDED152ED0DAA1008A6AB5 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -232,6 +239,16 @@
 			children = (
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		F779BB4B2ED22A1200F4A161 /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */,
+				F779BB852ED2314800F4A161 /* SaveModel.swift */,
+				F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */,
+			);
+			path = Save;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +344,7 @@
 			files = (
 				F6EDED8F2ED0DCA9008A6AB5 /* UIView+.swift in Sources */,
 				F6EDEDA82ED0DFA0008A6AB5 /* ReuseIdentifiable.swift in Sources */,
+				F779BB4F2ED22ACA00F4A161 /* SaveViewCell.swift in Sources */,
 				F6EDEDA52ED0DE07008A6AB5 /* UITextField+.swift in Sources */,
 				F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */,
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
@@ -334,10 +352,12 @@
 				F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */,
 				F6EDEF132ED195CB008A6AB5 /* NetworkResult.swift in Sources */,
 				F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */,
+				F779BB862ED2314800F4A161 /* SaveModel.swift in Sources */,
 				F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */,
 				F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */,
 				F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */,
 				F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */,
+				F779BB4D2ED22A2000F4A161 /* SaveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
