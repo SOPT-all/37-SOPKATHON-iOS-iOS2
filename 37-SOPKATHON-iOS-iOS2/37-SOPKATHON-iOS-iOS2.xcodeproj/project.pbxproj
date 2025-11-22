@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4BB9F20D2ED22AB300407C32 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F20C2ED22AB300407C32 /* SearchCell.swift */; };
 		4BB9F2122ED2322000407C32 /* SearchViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2112ED2322000407C32 /* SearchViewCotroller.swift */; };
+		4BB9F2152ED235A400407C32 /* SearchHotplaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */; };
 		F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */; };
 		F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED142ED0DAA1008A6AB5 /* SceneDelegate.swift */; };
 		F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED152ED0DAA1008A6AB5 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4BB9F20C2ED22AB300407C32 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		4BB9F2112ED2322000407C32 /* SearchViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCotroller.swift; sourceTree = "<group>"; };
+		4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotplaceResponse.swift; sourceTree = "<group>"; };
 		F6EDECF52ED0DA8F008A6AB5 /* 37-SOPKATHON-iOS-iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-SOPKATHON-iOS-iOS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EDED0E2ED0DAA1008A6AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		4BB9F2082ED22A7800407C32 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				4BB9F2132ED2359800407C32 /* Model */,
 				4BB9F2102ED2320A00407C32 /* ViewController */,
 				4BB9F20B2ED22A9A00407C32 /* View */,
 			);
@@ -118,6 +121,14 @@
 				4BB9F2112ED2322000407C32 /* SearchViewCotroller.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4BB9F2132ED2359800407C32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F6EDECEC2ED0DA8F008A6AB5 = {
@@ -394,6 +405,7 @@
 				F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */,
 				F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */,
 				F6EDEF542ED232B8008A6AB5 /* TestSaveViewController.swift in Sources */,
+				4BB9F2152ED235A400407C32 /* SearchHotplaceResponse.swift in Sources */,
 				F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */,
 				F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */,
 				F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */,
