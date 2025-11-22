@@ -56,4 +56,6 @@
 
 ## Before
 <img src = "https://github.com/user-attachments/assets/319fcaa2-62ba-49e7-9073-0898ea961762" width ="500"> <img src = "https://github.com/user-attachments/assets/136ad888-87f2-46a1-8a39-2aa764abe615" width ="500">
+## After
+<img src = "https://github.com/user-attachments/assets/41c35256-0f05-49a5-9866-2d0392dcf1d3" width ="500"> 
 
