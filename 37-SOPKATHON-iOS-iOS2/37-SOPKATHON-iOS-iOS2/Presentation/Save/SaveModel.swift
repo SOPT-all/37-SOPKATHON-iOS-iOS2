@@ -25,6 +25,21 @@ public struct SaveModel: Codable {
     }
     
     static let mockData: [SaveModel] = [
-        SaveModel(savedPlaceId: 1, placeId: 1, name: "무슨 해변", imageUrl: "ㅋㅋ", latitude: 2, longitude: 2)
-    ]
+            SaveModel(
+                savedPlaceId: 501,
+                placeId: 10,
+                name: "Manly Beach",
+                imageUrl: "https://example.com/images/manly.jpg",
+                latitude: -33.8001,
+                longitude: 151.2875
+            ),
+            SaveModel(
+                savedPlaceId: 505,
+                placeId: 15,
+                name: "Bondi Beach",
+                imageUrl: "https://example.com/images/bondi.jpg",
+                latitude: -33.8915,
+                longitude: 151.2767
+            )
+        ]
 }

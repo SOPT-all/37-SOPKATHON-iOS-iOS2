@@ -53,9 +53,9 @@ final class SaveViewCell: UITableViewCell, ReuseIdentifiable {
         }
     }
     
-    func configure() {
+    func configure(with model: SaveModel) {
         saveImage.image = UIImage(systemName: "rectangle.fill")
-        saveName.text = "zzzz"
+        saveName.text = model.name
     }
 }
 

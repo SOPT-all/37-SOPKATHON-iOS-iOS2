@@ -11,8 +11,10 @@ import SnapKit
 import Then
 
 class SaveViewController: BaseViewController {
+    private var savedPlaces: [SaveModel] = SaveModel.mockData
+    
     private let tableView = UITableView().then {
-        $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        $0.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
     }
     
     override func setStyle() {
@@ -37,21 +39,18 @@ class SaveViewController: BaseViewController {
     override func setAction() {
         
     }
-    
-    private func register() {
-        tableView.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
-    }
 }
 
 extension SaveViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return savedPlaces.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SaveViewCell.reuseIdentifier, for: indexPath) as? SaveViewCell else { return UITableViewCell() }
         
-        cell.configure()
+        let model = savedPlaces[indexPath.row]
+        cell.configure(with: model)
         return cell
     }
 }
@@ -61,6 +60,8 @@ extension SaveViewController: UITableViewDelegate {
         if editingStyle == .delete {
             tableView.beginUpdates()
             
+            savedPlaces.remove(at: indexPath.row)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
             
             // TODO: 뭐 삭제할지
@@ -68,4 +69,8 @@ extension SaveViewController: UITableViewDelegate {
             tableView.endUpdates()
         }
     }
+}
+
+#Preview {
+    SaveViewController()
 }
