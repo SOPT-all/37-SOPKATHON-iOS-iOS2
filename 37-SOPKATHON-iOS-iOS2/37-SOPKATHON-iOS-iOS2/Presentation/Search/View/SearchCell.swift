@@ -45,7 +45,6 @@ final class SearchCell: UITableViewCell, ReuseIdentifiable {
     
     func setStyle() {
         titleImage.do {
-    
             $0.layer.backgroundColor = UIColor.gray200.cgColor
             $0.clipsToBounds = true
         }
@@ -59,16 +58,22 @@ final class SearchCell: UITableViewCell, ReuseIdentifiable {
         titleStackView.do {
             $0.addArrangedSubviews(titleImage,titleLabel)
             $0.axis = .horizontal
-            $0.alignment = .leading
             $0.spacing = 12
         }
     }
     
     func setLayout() {
-        titleStackView.snp.makeConstraints {
-            $0.bottom.top.equalToSuperview().inset(10)
-            $0.leading.trailing.equalToSuperview().inset(20)
+        titleImage.snp.makeConstraints {
+            $0.height.width.equalTo(70)
         }
+        titleStackView.snp.makeConstraints {
+            $0.verticalEdges.equalToSuperview().inset(20)
+            $0.horizontalEdges.equalToSuperview().inset(10)
+        }
+    }
+    
+    func configure(with serachHotplaceResponse: SearchHotplaceResponse) {
+        titleLabel.text = serachHotplaceResponse.name
         
     }
 }

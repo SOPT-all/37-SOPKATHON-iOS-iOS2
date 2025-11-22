@@ -19,6 +19,7 @@ final class SearchViewController: BaseViewController {
     
     override func setUI() {
         view.addSubview(tableView)
+        navigationItem.searchController = searchController
         searchHotplace = SearchHotplaceResponse.mockList
     }
     
@@ -56,6 +57,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.reuseIdentifier, for: indexPath) as! SearchCell
+        cell.configure(with: searchHotplace[indexPath.row])
         cell.selectionStyle = .none
     
         return cell
