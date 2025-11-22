@@ -33,6 +33,8 @@
 		F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF0B2ED195CB008A6AB5 /* GenericResponse.swift */; };
 		F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */; };
 		F6EDEF1F2ED19658008A6AB5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEF1E2ED19658008A6AB5 /* Moya */; };
+		F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */; };
+		F6EDEF492ED22564008A6AB5 /* NSAtrributedString+.swift in Resources */ = {isa = PBXBuildFile; fileRef = F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		F6EDEF0A2ED195CB008A6AB5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		F6EDEF0B2ED195CB008A6AB5 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
+		F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAtrributedString+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 		F6EDED222ED0DBD5008A6AB5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */,
+				F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */,
 				F6EDEDA42ED0DE07008A6AB5 /* UITextField+.swift */,
 				F6EDED8E2ED0DCA9008A6AB5 /* UIView+.swift */,
 				F6EDED8C2ED0DC82008A6AB5 /* UIStackView+.swift */,
@@ -299,6 +305,7 @@
 			files = (
 				F6EDED9A2ED0DCF4008A6AB5 /* Pretendard-Bold.otf in Resources */,
 				F6EDED9B2ED0DCF4008A6AB5 /* Pretendard-Medium.otf in Resources */,
+				F6EDEF492ED22564008A6AB5 /* NSAtrributedString+.swift in Resources */,
 				F6EDED9C2ED0DCF4008A6AB5 /* Pretendard-ExtraLight.otf in Resources */,
 				F6EDED9D2ED0DCF4008A6AB5 /* Pretendard-SemiBold.otf in Resources */,
 				F6EDED9E2ED0DCF4008A6AB5 /* Pretendard-Thin.otf in Resources */,
@@ -327,6 +334,7 @@
 				F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */,
 				F6EDEF132ED195CB008A6AB5 /* NetworkResult.swift in Sources */,
 				F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */,
+				F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */,
 				F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */,
 				F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */,
 				F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */,
