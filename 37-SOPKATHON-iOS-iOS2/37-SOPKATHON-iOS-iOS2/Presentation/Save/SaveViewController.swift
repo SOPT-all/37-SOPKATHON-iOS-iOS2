@@ -14,6 +14,8 @@ import Moya
 class SaveViewController: BaseViewController {
     private let provider = MoyaProvider<SaveAPI>()
     
+    private let naviBar = CustomNavigationBar()
+    
     private var savedPlaces: [SaveModel] = []
     private let tableView = UITableView().then {
         $0.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
@@ -30,12 +32,19 @@ class SaveViewController: BaseViewController {
     }
     
     override func setUI() {
-        self.view.addSubviews(tableView)
+        self.view.addSubviews(naviBar, tableView)
     }
     
     override func setLayout() {
+        naviBar.snp.makeConstraints {
+                $0.top.equalTo(view.safeAreaLayoutGuide)   // 상태바 아래부터
+                $0.leading.trailing.equalToSuperview()
+                $0.height.equalTo(44)                     // 커스텀 네비바 높이
+            }
+        
         tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(naviBar.snp.bottom)
+            $0.bottom.leading.trailing.equalToSuperview()
         }
     }
     
@@ -75,10 +84,10 @@ class SaveViewController: BaseViewController {
     
     
     
-    private func pushToDetail() {
-        let detailVC = SaveDetailViewController()
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
+//    private func pushToDetail() {
+//        let detailVC = SaveDetailViewController()
+//        navigationController?.pushViewController(detailVC, animated: true)
+//    }
 }
 
 extension SaveViewController: UITableViewDataSource {
@@ -115,8 +124,9 @@ extension SaveViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = savedPlaces[indexPath.row]
-        pushToDetail()
+        let place = savedPlaces[indexPath.row]
+          let vc = SaveDetailViewController(placeId: place.placeId)
+          navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -55,6 +55,8 @@
 		F779BD032ED2586200F4A161 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F779BD022ED2586200F4A161 /* Kingfisher */; };
 		F7A6A54C2ED26CD400A762D7 /* SaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6A54B2ED26CD400A762D7 /* SaveDetailViewController.swift */; };
 		F7A6A5522ED2702D00A762D7 /* SaveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6A5512ED2702D00A762D7 /* SaveAPI.swift */; };
+		F7A6A5542ED276DD00A762D7 /* DetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6A5532ED276DD00A762D7 /* DetailAPI.swift */; };
+		F7A6A5572ED277BA00A762D7 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6A5562ED277BA00A762D7 /* DetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		F779BCFF2ED2580C00F4A161 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		F7A6A54B2ED26CD400A762D7 /* SaveDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDetailViewController.swift; sourceTree = "<group>"; };
 		F7A6A5512ED2702D00A762D7 /* SaveAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAPI.swift; sourceTree = "<group>"; };
+		F7A6A5532ED276DD00A762D7 /* DetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAPI.swift; sourceTree = "<group>"; };
+		F7A6A5562ED277BA00A762D7 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,12 +345,22 @@
 			isa = PBXGroup;
 			children = (
 				F779BB4C2ED22A2000F4A161 /* SaveViewController.swift */,
-				F7A6A54B2ED26CD400A762D7 /* SaveDetailViewController.swift */,
+				F7A6A5552ED277A700A762D7 /* SaveDetail */,
 				F779BB852ED2314800F4A161 /* SaveModel.swift */,
 				F7A6A5512ED2702D00A762D7 /* SaveAPI.swift */,
 				F779BB4E2ED22ACA00F4A161 /* SaveViewCell.swift */,
 			);
 			path = Save;
+			sourceTree = "<group>";
+		};
+		F7A6A5552ED277A700A762D7 /* SaveDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6A5532ED276DD00A762D7 /* DetailAPI.swift */,
+				F7A6A54B2ED26CD400A762D7 /* SaveDetailViewController.swift */,
+				F7A6A5562ED277BA00A762D7 /* DetailModel.swift */,
+			);
+			path = SaveDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,7 +468,9 @@
 				F7A6A54C2ED26CD400A762D7 /* SaveDetailViewController.swift in Sources */,
 				F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */,
 				F6EDEF4E2ED22E67008A6AB5 /* MainTab.swift in Sources */,
+				F7A6A5542ED276DD00A762D7 /* DetailAPI.swift in Sources */,
 				4BB9F2122ED2322000407C32 /* SearchViewController.swift in Sources */,
+				F7A6A5572ED277BA00A762D7 /* DetailModel.swift in Sources */,
 				F779BD002ED2580C00F4A161 /* UIImageView+.swift in Sources */,
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
 				AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */,
