@@ -28,6 +28,11 @@
 		F6EDEDAA2ED0E0A6008A6AB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEDA92ED0E0A6008A6AB5 /* BaseViewController.swift */; };
 		F6EDEDAD2ED0E0C7008A6AB5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEDAC2ED0E0C7008A6AB5 /* SnapKit */; };
 		F6EDEDB02ED0E0D7008A6AB5 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEDAF2ED0E0D7008A6AB5 /* Then */; };
+		F6EDEF132ED195CB008A6AB5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF0A2ED195CB008A6AB5 /* NetworkResult.swift */; };
+		F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF092ED195CB008A6AB5 /* BaseTargetType.swift */; };
+		F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF0B2ED195CB008A6AB5 /* GenericResponse.swift */; };
+		F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */; };
+		F6EDEF1F2ED19658008A6AB5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEF1E2ED19658008A6AB5 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,10 @@
 		F6EDEDA42ED0DE07008A6AB5 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		F6EDEDA72ED0DFA0008A6AB5 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		F6EDEDA92ED0E0A6008A6AB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F6EDEF092ED195CB008A6AB5 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		F6EDEF0A2ED195CB008A6AB5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		F6EDEF0B2ED195CB008A6AB5 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +70,7 @@
 			files = (
 				F6EDEDAD2ED0E0C7008A6AB5 /* SnapKit in Frameworks */,
 				F6EDEDB02ED0E0D7008A6AB5 /* Then in Frameworks */,
+				F6EDEF1F2ED19658008A6AB5 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +129,9 @@
 		F6EDED202ED0DB68008A6AB5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F6EDEF082ED195CB008A6AB5 /* API */,
+				F6EDEF0E2ED195CB008A6AB5 /* Common */,
+				F6EDEF122ED195CB008A6AB5 /* DTO */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -182,6 +195,39 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		F6EDEF082ED195CB008A6AB5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F6EDEF0C2ED195CB008A6AB5 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F6EDEF092ED195CB008A6AB5 /* BaseTargetType.swift */,
+				F6EDEF0A2ED195CB008A6AB5 /* NetworkResult.swift */,
+				F6EDEF0B2ED195CB008A6AB5 /* GenericResponse.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F6EDEF0E2ED195CB008A6AB5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F6EDEF0C2ED195CB008A6AB5 /* Foundation */,
+				F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F6EDEF122ED195CB008A6AB5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +247,7 @@
 			packageProductDependencies = (
 				F6EDEDAC2ED0E0C7008A6AB5 /* SnapKit */,
 				F6EDEDAF2ED0E0D7008A6AB5 /* Then */,
+				F6EDEF1E2ED19658008A6AB5 /* Moya */,
 			);
 			productName = "37-SOPKATHON-iOS-iOS2";
 			productReference = F6EDECF52ED0DA8F008A6AB5 /* 37-SOPKATHON-iOS-iOS2.app */;
@@ -233,6 +280,7 @@
 			packageReferences = (
 				F6EDEDAB2ED0E0C7008A6AB5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F6EDEDAE2ED0E0D7008A6AB5 /* XCRemoteSwiftPackageReference "Then" */,
+				F6EDEF1D2ED19658008A6AB5 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F6EDECF62ED0DA8F008A6AB5 /* Products */;
@@ -277,6 +325,10 @@
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
 				F6EDEDAA2ED0E0A6008A6AB5 /* BaseViewController.swift in Sources */,
 				F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */,
+				F6EDEF132ED195CB008A6AB5 /* NetworkResult.swift in Sources */,
+				F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */,
+				F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */,
+				F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */,
 				F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +360,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +391,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,6 +568,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		F6EDEF1D2ED19658008A6AB5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -526,6 +588,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F6EDEDAE2ED0E0D7008A6AB5 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		F6EDEF1E2ED19658008A6AB5 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6EDEF1D2ED19658008A6AB5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
