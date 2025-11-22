@@ -5,32 +5,33 @@
 //  Created by 정윤아 on 11/23/25.
 //
 
-import internal import Alamofire
+import Moya
+internal import Alamofire
 
 enum HomeAPI {
-    case getUV
+    case getTodayArticle
 }
 
 extension HomeAPI: BaseTargetType {
     
     var path: String {
         switch self {
-        case .getUV:
-            return "/uv"   // 여기에 진짜 API path 넣기
+        case .getTodayArticle:
+            return "/home/article"   // TODO: 실제 엔드포인트로 수정
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getUV:
+        case .getTodayArticle:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case .getUV:
-            return .requestPlain   // 쿼리파라미터 없으면 그대로 사용
+        case .getTodayArticle:
+            return .requestPlain      // 쿼리 없으면 이대로
         }
     }
     
@@ -38,3 +39,4 @@ extension HomeAPI: BaseTargetType {
         return ["Content-Type": "application/json"]
     }
 }
+

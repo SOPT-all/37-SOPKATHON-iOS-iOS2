@@ -13,6 +13,7 @@
 
     final class HomeViewController: BaseViewController {
         
+//        private let provider = MoyaProvider<HomeAPI>()
         private var mockLists: [Home] = []
         //MARK: - UI
         
@@ -32,6 +33,7 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             loadMockData()
+//            fetchTodayArticle()
             
             applyUV(
                     uvString: "5",
@@ -122,6 +124,32 @@
             articleTitleLabel.text = mock.title
             articleURL = URL(string: mock.link)
         }
+        
+//        private func fetchTodayArticle() {
+//            provider.request(.getTodayArticle) { [weak self] result in
+//                guard let self = self else { return }
+//                
+//                switch result {
+//                case .success(let response):
+//                    do {
+//                        let article = try JSONDecoder().decode(Home.self, from: response.data)
+//                        
+//                        DispatchQueue.main.async {
+//                            // UI 바인딩
+//                            self.articleTitleLabel.text = article.title
+//                            self.articleURL = URL(string: article.link)
+//                        }
+//                        
+//                    } catch {
+//                        print("❌ 디코딩 실패:", error)
+//                    }
+//                    
+//                case .failure(let error):
+//                    print("❌ 네트워크 실패:", error)
+//                    self.loadMockData()
+//                }
+//            }
+//        }
         
         private func updateSantaImage(for uv: Double) {
             let value = Int(uv.rounded())
