@@ -12,15 +12,25 @@ import Then
 
 final class SearchViewController: BaseViewController {
     
-    var searchHotplace: [SearchHotplaceResponse] = []
-
-    private let tableView = UITableView()
-    private lazy var searchController = UISearchController()
+    var searchHotplace: [Datum] = []
     
+    private let service = SearchService()
+    
+    
+    private let tableView = UITableView()
+    private lazy var searchController = UISearchController(searchResultsController: nil)
     override func setUI() {
+        
+        Task {
+            try await getHotPlace()
+            tableView.reloadData()
+        }
         view.addSubview(tableView)
+        view.backgroundColor = .white
         navigationItem.searchController = searchController
-        searchHotplace = SearchHotplaceResponse.mockList
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationController?.navigationBar.prefersLargeTitles = false
+//        searchHotplace = SearchHotplaceResponse.mockData.data
     }
     
     override func setStyle() {
@@ -32,25 +42,29 @@ final class SearchViewController: BaseViewController {
             $0.delegate = self
             $0.register(SearchCell.self, forCellReuseIdentifier: SearchCell.reuseIdentifier)
         }
-    }
-    
-    override func setAction() {
         
-    }
-    
-    override func setLayout() {
-        tableView.snp.makeConstraints{
-            $0.edges.equalToSuperview()
+        searchController.do {
+            $0.searchBar.placeholder = "검색어를 입력해주세요"
+            $0.obscuresBackgroundDuringPresentation = false
+            $0.searchBar.showsCancelButton = false
+            $0.searchResultsUpdater = self
         }
     }
     
-    override func setDelegate() {
-        
+    override func setLayout() {
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    func getHotPlace() async throws{
+        let response = try await service.getHotplace()
+        searchHotplace = response.data
     }
 }
 
-
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchHotplace.count
     }
@@ -59,18 +73,27 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.reuseIdentifier, for: indexPath) as! SearchCell
         cell.configure(with: searchHotplace[indexPath.row])
         cell.selectionStyle = .none
-    
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+           return "현재 인기 서핑 스팟"
+       }
+    
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard searchController.searchBar.text != nil else {
+            return
+        }
+        self.tableView.reloadData()
+        
     }
     
     
 }
-
-
-extension SearchViewController: UISearchControllerDelegate {
-    
-}
-
 
 #Preview {
     
