@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE175FE02ED22A41002678BA /* HomeViewController.swift */; };
+		AE1760392ED23F75002678BA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1760382ED23F6E002678BA /* HomeModel.swift */; };
 		F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */; };
 		F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED142ED0DAA1008A6AB5 /* SceneDelegate.swift */; };
 		F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED152ED0DAA1008A6AB5 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE175FE02ED22A41002678BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AE1760382ED23F6E002678BA /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		F6EDECF52ED0DA8F008A6AB5 /* 37-SOPKATHON-iOS-iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-SOPKATHON-iOS-iOS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EDED0E2ED0DAA1008A6AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE175FDF2ED229A5002678BA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AE1760382ED23F6E002678BA /* HomeModel.swift */,
+				AE175FE02ED22A41002678BA /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		F6EDECEC2ED0DA8F008A6AB5 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 		F6EDED212ED0DB78008A6AB5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				AE175FDF2ED229A5002678BA /* Home */,
 				F6EDED152ED0DAA1008A6AB5 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -355,6 +369,8 @@
 				F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */,
 				F6EDEF4E2ED22E67008A6AB5 /* MainTab.swift in Sources */,
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
+				AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */,
+				AE1760392ED23F75002678BA /* HomeModel.swift in Sources */,
 				F6EDEDAA2ED0E0A6008A6AB5 /* BaseViewController.swift in Sources */,
 				F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */,
 				F6EDEF4C2ED22DFD008A6AB5 /* Tabbar.swift in Sources */,

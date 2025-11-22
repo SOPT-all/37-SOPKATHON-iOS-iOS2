@@ -35,3 +35,7 @@ final class Tabbar: UITabBarController {
             tabBar.backgroundColor = .suntaWhite
     }
 }
+
+#Preview {
+    Tabbar()
+}
