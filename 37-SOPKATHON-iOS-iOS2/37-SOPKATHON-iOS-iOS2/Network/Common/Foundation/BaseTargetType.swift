@@ -16,7 +16,7 @@ extension BaseTargetType{
     var baseURL: URL {
         /// 실제 url로 바꿔주세요.
 //        return URL(string: "https://62268471-962b-47f7-bf38-92dd2a82213e.mock.pstmn.io/")!
-        return URL(string:"http://43.201.115.250:8080")!
+        return URL(string:"https://api.sopkathon.p-e.kr")!
     }
 
     var headers: [String : String]? {

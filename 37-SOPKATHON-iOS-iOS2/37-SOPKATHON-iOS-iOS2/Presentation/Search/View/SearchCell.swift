@@ -9,6 +9,7 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 final class SearchCell: UITableViewCell, ReuseIdentifiable {
     
@@ -72,7 +73,8 @@ final class SearchCell: UITableViewCell, ReuseIdentifiable {
         }
     }
     
-    func configure(with serachHotplaceResponse: SearchHotplaceResponse) {
+    func configure(with serachHotplaceResponse: Datum) {
+        titleImage.kf.setImage(with: URL(string: serachHotplaceResponse.imageURL))
         titleLabel.text = serachHotplaceResponse.name
         
         

@@ -12,18 +12,25 @@ import Then
 
 final class SearchViewController: BaseViewController {
     
-    var searchHotplace: [SearchHotplaceResponse] = []
+    var searchHotplace: [Datum] = []
+    
+    private let service = SearchService()
+    
     
     private let tableView = UITableView()
-    private lazy var searchController = UISearchController(searchResultsController: ResultViewController())
-    
+    private lazy var searchController = UISearchController(searchResultsController: nil)
     override func setUI() {
+        
+        Task {
+            try await getHotPlace()
+            tableView.reloadData()
+        }
         view.addSubview(tableView)
         view.backgroundColor = .white
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationController?.navigationBar.prefersLargeTitles = false
-        searchHotplace = SearchHotplaceResponse.mockList
+//        searchHotplace = SearchHotplaceResponse.mockData.data
     }
     
     override func setStyle() {
@@ -48,6 +55,11 @@ final class SearchViewController: BaseViewController {
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    func getHotPlace() async throws{
+        let response = try await service.getHotplace()
+        searchHotplace = response.data
     }
 }
 
