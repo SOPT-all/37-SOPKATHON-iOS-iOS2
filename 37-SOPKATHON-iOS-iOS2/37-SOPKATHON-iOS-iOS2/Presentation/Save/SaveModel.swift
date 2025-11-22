@@ -7,23 +7,31 @@
 
 import Foundation
 
-public struct SaveModel: Codable {
-    public var savedPlaceId: Int
-    public var placeId: Int
-    public var name: String
-    public var imageUrl: String
-    public var latitude: Double
-    public var longitude: Double
-    
-    init(savedPlaceId: Int, placeId: Int, name: String, imageUrl: String, latitude: Double, longitude: Double) {
-        self.savedPlaceId = savedPlaceId
-        self.placeId = placeId
-        self.name = name
-        self.imageUrl = imageUrl
-        self.latitude = latitude
-        self.longitude = longitude
-    }
-    
+struct SaveResponse: Codable {
+    let status: Int
+    let message: String
+    let data: [SaveModel]
+}
+
+struct SaveModel: Codable {
+     let savedPlaceId: Int
+     let placeId: Int
+     let name: String
+     let imageUrl: String
+     let latitude: Double
+     let longitude: Double
+
+    enum CodingKeys: String, CodingKey {
+            case savedPlaceId
+            case placeId
+            case name
+            case imageUrl
+            case latitude
+            case longitude
+        }
+}
+
+extension SaveModel {
     static let mockData: [SaveModel] = [
             SaveModel(
                 savedPlaceId: 501,

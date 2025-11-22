@@ -54,8 +54,12 @@ final class SaveViewCell: UITableViewCell, ReuseIdentifiable {
         }
     }
     
+//    func configure(with model: SaveModel) {
+//        saveImage.image = UIImage(systemName: "rectangle.fill")
+//        saveName.text = model.name
+//    }
     func configure(with model: SaveModel) {
-        saveImage.image = UIImage(systemName: "rectangle.fill")
+        saveImage.kfSetImage(url: model.imageUrl)
         saveName.text = model.name
     }
 }

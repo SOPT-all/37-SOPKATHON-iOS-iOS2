@@ -9,16 +9,19 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 class SaveViewController: BaseViewController {
-    private var savedPlaces: [SaveModel] = SaveModel.mockData
+    private let provider = MoyaProvider<SaveAPI>()
     
+    private var savedPlaces: [SaveModel] = []
     private let tableView = UITableView().then {
         $0.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchMyPlace()
     }
     
     override func setStyle() {
@@ -41,9 +44,36 @@ class SaveViewController: BaseViewController {
         tableView.delegate = self
     }
     
-    override func setAction() {
-        
+    private func fetchMyPlace() {
+        provider.request(.getMyPlace) { [weak self] result in
+            guard let self else { return }
+
+            switch result {
+            case .success(let response):
+                do {
+                    let decoded = try JSONDecoder().decode(SaveResponse.self, from: response.data)
+                    self.savedPlaces = decoded.data
+
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+
+                } catch {
+                    print("❌ 디코딩 실패:", error)
+                    if let json = String(data: response.data, encoding: .utf8) {
+                        print("서버 응답 바디:", json)
+                    }
+                }
+
+            case .failure(let error):
+                print("❌ 네트워크 실패:", error)
+            }
+        }
     }
+    
+    
+    
+    
     
     private func pushToDetail() {
         let detailVC = SaveDetailViewController()
