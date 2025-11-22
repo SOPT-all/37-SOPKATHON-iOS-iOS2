@@ -50,10 +50,6 @@ final class CustomNavigationBar: UIView {
     // MARK: - Set
     
     private func setLayout() {
-        self.snp.makeConstraints {
-            $0.width.equalToSuperview()
-            $0.height.equalTo(44)
-        }
         addSubviews(
             backButton,
             titleLabel
