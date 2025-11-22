@@ -11,13 +11,14 @@
 		4BB9F2122ED2322000407C32 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2112ED2322000407C32 /* SearchViewController.swift */; };
 		4BB9F2152ED235A400407C32 /* SearchHotplaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */; };
 		AE175FE12ED22A48002678BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE175FE02ED22A41002678BA /* HomeViewController.swift */; };
-		AE1760392ED23F75002678BA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1760382ED23F6E002678BA /* HomeModel.swift */; };
-		F68508432ED255B200CEBD2C /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */; };
-		F68508452ED255CA00CEBD2C /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508442ED255CA00CEBD2C /* CardType.swift */; };
-		F68508472ED2579F00CEBD2C /* UVCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508462ED2579900CEBD2C /* UVCard.swift */; };
 		AE1760392ED23F75002678BA /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1760382ED23F6E002678BA /* HomeResponse.swift */; };
 		AE1760982ED26174002678BA /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1760972ED26171002678BA /* HomeAPI.swift */; };
 		AE17609B2ED2621C002678BA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AE17609A2ED2621C002678BA /* Moya */; };
+		AE17609D2ED26887002678BA /* UVResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE17609C2ED26882002678BA /* UVResponse.swift */; };
+		AE1760A02ED273F9002678BA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AE17609F2ED273F9002678BA /* Kingfisher */; };
+		F68508432ED255B200CEBD2C /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */; };
+		F68508452ED255CA00CEBD2C /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508442ED255CA00CEBD2C /* CardType.swift */; };
+		F68508472ED2579F00CEBD2C /* UVCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68508462ED2579900CEBD2C /* UVCard.swift */; };
 		F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */; };
 		F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED142ED0DAA1008A6AB5 /* SceneDelegate.swift */; };
 		F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDED152ED0DAA1008A6AB5 /* ViewController.swift */; };
@@ -60,16 +61,12 @@
 		4BB9F2112ED2322000407C32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotplaceResponse.swift; sourceTree = "<group>"; };
 		AE175FE02ED22A41002678BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AE1760382ED23F6E002678BA /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		AE1760382ED23F6E002678BA /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		AE1760972ED26171002678BA /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		AE17609C2ED26882002678BA /* UVResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVResponse.swift; sourceTree = "<group>"; };
 		F68508422ED255B200CEBD2C /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		F68508442ED255CA00CEBD2C /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		F68508462ED2579900CEBD2C /* UVCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVCard.swift; sourceTree = "<group>"; };
-		4BB9F20C2ED22AB300407C32 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		4BB9F2112ED2322000407C32 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotplaceResponse.swift; sourceTree = "<group>"; };
-		AE175FE02ED22A41002678BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AE1760382ED23F6E002678BA /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
-		AE1760972ED26171002678BA /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		F6EDECF52ED0DA8F008A6AB5 /* 37-SOPKATHON-iOS-iOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-SOPKATHON-iOS-iOS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EDED0D2ED0DAA1008A6AB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EDED0E2ED0DAA1008A6AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1760A02ED273F9002678BA /* Kingfisher in Frameworks */,
 				F6EDEDAD2ED0E0C7008A6AB5 /* SnapKit in Frameworks */,
 				F6EDEDB02ED0E0D7008A6AB5 /* Then in Frameworks */,
 				AE17609B2ED2621C002678BA /* Moya in Frameworks */,
@@ -121,49 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4BB9F2092ED229F400407C32 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2102ED231F900407C32 /* ViewController */,
-				4BB9F20F2ED231ED00407C32 /* View */,
-				4BB9F20E2ED231E100407C32 /* Model */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		4BB9F20E2ED231E100407C32 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2142ED235A400407C32 /* SearchHotplaceResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4BB9F20F2ED231ED00407C32 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F20C2ED22AB300407C32 /* SearchCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4BB9F2102ED231F900407C32 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4BB9F2112ED2322000407C32 /* SearchViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		AE175FDF2ED229A5002678BA /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				AE175FE02ED22A41002678BA /* HomeViewController.swift */,
-				AE1760382ED23F6E002678BA /* HomeModel.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		4BB9F2092ED229F400407C32 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +173,7 @@
 		AE1760952ED25DFD002678BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE17609C2ED26882002678BA /* UVResponse.swift */,
 				AE1760382ED23F6E002678BA /* HomeResponse.swift */,
 			);
 			path = Model;
@@ -400,11 +356,6 @@
 				F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */,
 				F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */,
 				F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */,
-				F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */,
-				F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */,
-				F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */,
-				F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */,
-				F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -439,6 +390,7 @@
 				F6EDEDAC2ED0E0C7008A6AB5 /* SnapKit */,
 				F6EDEDAF2ED0E0D7008A6AB5 /* Then */,
 				AE17609A2ED2621C002678BA /* Moya */,
+				AE17609F2ED273F9002678BA /* Kingfisher */,
 			);
 			productName = "37-SOPKATHON-iOS-iOS2";
 			productReference = F6EDECF52ED0DA8F008A6AB5 /* 37-SOPKATHON-iOS-iOS2.app */;
@@ -472,6 +424,7 @@
 				F6EDEDAB2ED0E0C7008A6AB5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F6EDEDAE2ED0E0D7008A6AB5 /* XCRemoteSwiftPackageReference "Then" */,
 				AE1760992ED2621C002678BA /* XCRemoteSwiftPackageReference "Moya" */,
+				AE17609E2ED273F9002678BA /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F6EDECF62ED0DA8F008A6AB5 /* Products */;
@@ -512,6 +465,7 @@
 			files = (
 				F6EDED8F2ED0DCA9008A6AB5 /* UIView+.swift in Sources */,
 				F6EDEDA82ED0DFA0008A6AB5 /* ReuseIdentifiable.swift in Sources */,
+				AE17609D2ED26887002678BA /* UVResponse.swift in Sources */,
 				F68508472ED2579F00CEBD2C /* UVCard.swift in Sources */,
 				F779BB4F2ED22ACA00F4A161 /* SaveViewCell.swift in Sources */,
 				F68508432ED255B200CEBD2C /* CustomNavigationBar.swift in Sources */,
@@ -768,6 +722,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		AE17609E2ED273F9002678BA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
 		F6EDEDAB2ED0E0C7008A6AB5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -791,6 +753,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE1760992ED2621C002678BA /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		AE17609F2ED273F9002678BA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE17609E2ED273F9002678BA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		F6EDEDAC2ED0E0C7008A6AB5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

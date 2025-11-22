@@ -15,7 +15,7 @@ extension BaseTargetType{
 
     var baseURL: URL {
 
-        return URL(string:"http://13.125.29.35:8080")!
+        return URL(string:"https://api.sopkathon.p-e.kr")!
     }
 
     var headers: [String : String]? {

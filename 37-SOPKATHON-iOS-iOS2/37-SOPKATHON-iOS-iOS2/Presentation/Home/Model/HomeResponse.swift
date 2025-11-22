@@ -7,14 +7,19 @@
 
 import Foundation
 
-// MARK: - Welcome
+struct HomeResponse: Codable {
+    let status: Int
+    let message: String
+    let data: Home
+}
+
 struct Home: Codable {
     let articleID: Int
     let title: String
     let imageURL: String
     let link: String
 
-    enum Home: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case articleID = "articleId"
         case title
         case imageURL = "imageUrl"

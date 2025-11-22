@@ -10,6 +10,7 @@ internal import Alamofire
 
 enum HomeAPI {
     case getTodayArticle
+    case getUV                 // 🔥 UV 추가
 }
 
 extension HomeAPI: BaseTargetType {
@@ -17,26 +18,22 @@ extension HomeAPI: BaseTargetType {
     var path: String {
         switch self {
         case .getTodayArticle:
-            return "/home/article"   // TODO: 실제 엔드포인트로 수정
+            return "/home/article"   // 예시
+        case .getUV:
+            return "/home/uv?latitude=-33.89143205&longitude=151.2768124"       // ✅ UV 조회 엔드포인트
         }
     }
     
     var method: Moya.Method {
-        switch self {
-        case .getTodayArticle:
-            return .get
-        }
+        .get
     }
     
     var task: Task {
-        switch self {
-        case .getTodayArticle:
-            return .requestPlain      // 쿼리 없으면 이대로
-        }
+        .requestPlain
     }
     
     var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+        ["Content-Type": "application/json"]
     }
 }
 
