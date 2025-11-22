@@ -1,5 +1,5 @@
 //
-//  SearchViewCotroller.swift
+//  ResultViewController.swift
 //  37-SOPKATHON-iOS-iOS2
 //
 //  Created by 어재선 on 11/23/25.
@@ -10,20 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class SearchViewController: BaseViewController {
-    
+final class ResultViewController: BaseViewController {
     var searchHotplace: [SearchHotplaceResponse] = []
     
     private let tableView = UITableView()
-    private lazy var searchController = UISearchController(searchResultsController: ResultViewController())
     
     override func setUI() {
         view.addSubview(tableView)
         view.backgroundColor = .white
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationController?.navigationBar.prefersLargeTitles = false
-        searchHotplace = SearchHotplaceResponse.mockList
+        searchHotplace = [SearchHotplaceResponse.mock]
     }
     
     override func setStyle() {
@@ -36,12 +31,6 @@ final class SearchViewController: BaseViewController {
             $0.register(SearchCell.self, forCellReuseIdentifier: SearchCell.reuseIdentifier)
         }
         
-        searchController.do {
-            $0.searchBar.placeholder = "검색어를 입력해주세요"
-            $0.obscuresBackgroundDuringPresentation = false
-            $0.searchBar.showsCancelButton = false
-            $0.searchResultsUpdater = self
-        }
     }
     
     override func setLayout() {
@@ -51,8 +40,7 @@ final class SearchViewController: BaseViewController {
     }
 }
 
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
-    
+extension ResultViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchHotplace.count
     }
@@ -65,25 +53,5 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-           return "현재 인기 서핑 스팟"
-       }
     
-}
-
-extension SearchViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard searchController.searchBar.text != nil else {
-            return
-        }
-        self.tableView.reloadData()
-        
-    }
-    
-    
-}
-
-#Preview {
-    
-    SearchViewController()
 }

@@ -75,6 +75,7 @@ final class SearchCell: UITableViewCell, ReuseIdentifiable {
     func configure(with serachHotplaceResponse: SearchHotplaceResponse) {
         titleLabel.text = serachHotplaceResponse.name
         
+        
     }
 }
 
