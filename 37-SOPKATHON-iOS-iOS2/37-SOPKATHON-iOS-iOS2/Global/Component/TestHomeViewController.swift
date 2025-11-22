@@ -13,6 +13,7 @@ import Then
 final class TestHomeViewController: BaseViewController {
     
     private let HomeView = UIView()
+    private let uvView = UVCard(uvLevel: 5.0, uvDescription: "gd")
     
     override func setStyle() {
         HomeView.do {
@@ -22,6 +23,7 @@ final class TestHomeViewController: BaseViewController {
     
     override func setUI() {
         view.addSubviews(HomeView)
+        HomeView.addSubviews(uvView)
     }
     
     override func setLayout() {
@@ -29,6 +31,14 @@ final class TestHomeViewController: BaseViewController {
             $0.top.horizontalEdges.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
+        uvView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+        
     }
     
+}
+
+#Preview {
+    TestHomeViewController()
 }
