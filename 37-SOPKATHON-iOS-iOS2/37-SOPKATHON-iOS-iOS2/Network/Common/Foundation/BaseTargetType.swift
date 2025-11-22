@@ -8,13 +8,13 @@
 import Foundation
 
 import Moya
+//import Alamofire
 
 protocol BaseTargetType: TargetType { }
 
 extension BaseTargetType{
 
     var baseURL: URL {
-
         return URL(string:"https://api.sopkathon.p-e.kr")!
     }
 

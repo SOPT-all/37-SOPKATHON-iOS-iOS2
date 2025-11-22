@@ -16,9 +16,9 @@ class BaseViewController: UIViewController {
     /// Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setStyle()
         setUI()
+        setStyle()
+        
         setLayout()
         setDelegate()
         setAction()

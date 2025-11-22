@@ -9,25 +9,42 @@ import UIKit
 
 import SnapKit
 import Then
+import Moya
 
 class SaveViewController: BaseViewController {
-    private var savedPlaces: [SaveModel] = SaveModel.mockData
+    private let provider = MoyaProvider<SaveAPI>()
     
+    private let naviBar = CustomNavigationBar()
+    
+    private var savedPlaces: [SaveModel] = []
     private let tableView = UITableView().then {
         $0.register(SaveViewCell.self, forCellReuseIdentifier: SaveViewCell.reuseIdentifier)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchMyPlace()
+    }
+    
     override func setStyle() {
         self.view.backgroundColor = .white
+        tableView.separatorStyle = .none
     }
     
     override func setUI() {
-        self.view.addSubviews(tableView)
+        self.view.addSubviews(naviBar, tableView)
     }
     
     override func setLayout() {
+        naviBar.snp.makeConstraints {
+                $0.top.equalTo(view.safeAreaLayoutGuide)   // 상태바 아래부터
+                $0.leading.trailing.equalToSuperview()
+                $0.height.equalTo(44)                     // 커스텀 네비바 높이
+            }
+        
         tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalTo(naviBar.snp.bottom)
+            $0.bottom.leading.trailing.equalToSuperview()
         }
     }
     
@@ -36,9 +53,41 @@ class SaveViewController: BaseViewController {
         tableView.delegate = self
     }
     
-    override func setAction() {
-        
+    private func fetchMyPlace() {
+        provider.request(.getMyPlace) { [weak self] result in
+            guard let self else { return }
+
+            switch result {
+            case .success(let response):
+                do {
+                    let decoded = try JSONDecoder().decode(SaveResponse.self, from: response.data)
+                    self.savedPlaces = decoded.data
+
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+
+                } catch {
+                    print("❌ 디코딩 실패:", error)
+                    if let json = String(data: response.data, encoding: .utf8) {
+                        print("서버 응답 바디:", json)
+                    }
+                }
+
+            case .failure(let error):
+                print("❌ 네트워크 실패:", error)
+            }
+        }
     }
+    
+    
+    
+    
+    
+//    private func pushToDetail() {
+//        let detailVC = SaveDetailViewController()
+//        navigationController?.pushViewController(detailVC, animated: true)
+//    }
 }
 
 extension SaveViewController: UITableViewDataSource {
@@ -52,6 +101,10 @@ extension SaveViewController: UITableViewDataSource {
         let model = savedPlaces[indexPath.row]
         cell.configure(with: model)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
     }
 }
 
@@ -68,6 +121,12 @@ extension SaveViewController: UITableViewDelegate {
             
             tableView.endUpdates()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let place = savedPlaces[indexPath.row]
+          let vc = SaveDetailViewController(placeId: place.placeId)
+          navigationController?.pushViewController(vc, animated: true)
     }
 }
 
