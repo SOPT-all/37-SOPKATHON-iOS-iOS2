@@ -16,6 +16,7 @@ class SaveDetailViewController: BaseViewController {
     private let placeId: Int
     private let naviBar = CustomNavigationBar()
     private var uvCard: UVCard?
+    private let mapView = MapView(latitude: 33, longitude: 151)
     
     private var detail: PlaceDetail?
 
@@ -42,7 +43,7 @@ class SaveDetailViewController: BaseViewController {
         $0.axis = .vertical
         $0.spacing = 10
         $0.alignment = .leading
-        $0.layer.cornerRadius = 16
+        $0.layer.cornerRadius = 8
         $0.backgroundColor = .gray50
     }
     
@@ -65,9 +66,9 @@ class SaveDetailViewController: BaseViewController {
     }()
     
     
-    private lazy var firstTime = makeTimeLabel(time: "18:00 선크림 바르기")
-    private lazy var secondTime = makeTimeLabel(time: "18:00")
-    private lazy var thirdTime = makeTimeLabel(time: "18:00")
+    private lazy var firstTime = makeTimeLabel(time: "14:00 선크림 바르기")
+    private lazy var secondTime = makeTimeLabel(time: "16:00 선크림 바르기")
+    private lazy var thirdTime = makeTimeLabel(time: "18:00 선크림 바르기")
     
     override func setStyle() {
         view.backgroundColor = .white
@@ -76,7 +77,7 @@ class SaveDetailViewController: BaseViewController {
     override func setUI() {
         timeStackView.addArrangedSubviews(firstTime, separator1, secondTime,separator2,  thirdTime,separator3)
         
-        self.view.addSubviews(naviBar, timeStackView)
+        self.view.addSubviews(naviBar, timeStackView, mapView)
     }
     
     override func setLayout() {
@@ -86,9 +87,15 @@ class SaveDetailViewController: BaseViewController {
             $0.height.equalTo(44)
         }
         
+        mapView.snp.makeConstraints {
+            $0.top.equalTo(naviBar.snp.bottom).offset(10)
+            $0.horizontalEdges.equalToSuperview().inset(10)
+            $0.height.equalTo(200)
+        }
+        
         timeStackView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(40)
-            $0.centerY.equalToSuperview()
+            $0.height.equalTo(200)
         }
         
         separator1.snp.makeConstraints {
@@ -104,6 +111,12 @@ class SaveDetailViewController: BaseViewController {
         separator3.snp.makeConstraints {
             $0.height.equalTo(1)
             $0.width.equalTo(267)
+        }
+    }
+    
+    override func setAction() {
+        naviBar.onBackButtonTap = {
+            self.navigationController?.popViewController(animated: false)
         }
     }
     
@@ -197,7 +210,7 @@ class SaveDetailViewController: BaseViewController {
 
         // 🔥 오토레이아웃
         card.snp.makeConstraints {
-            $0.top.equalTo(naviBar.snp.bottom).offset(16)
+            $0.top.equalTo(mapView.snp.bottom).offset(16)
             $0.centerX.equalToSuperview()
         }
 

@@ -129,7 +129,3 @@ extension SaveViewController: UITableViewDelegate {
           navigationController?.pushViewController(vc, animated: true)
     }
 }
-
-#Preview {
-    SaveViewController()
-}

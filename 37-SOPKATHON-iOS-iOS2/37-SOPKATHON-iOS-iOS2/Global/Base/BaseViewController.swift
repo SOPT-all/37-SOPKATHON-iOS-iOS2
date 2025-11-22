@@ -14,6 +14,13 @@ import Then
 class BaseViewController: UIViewController {
     
     /// Life Cycle
+    ///
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
