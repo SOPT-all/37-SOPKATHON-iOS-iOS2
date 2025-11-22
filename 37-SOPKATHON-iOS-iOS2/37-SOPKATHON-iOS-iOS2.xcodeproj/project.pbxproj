@@ -35,6 +35,11 @@
 		F6EDEF1F2ED19658008A6AB5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = F6EDEF1E2ED19658008A6AB5 /* Moya */; };
 		F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */; };
 		F6EDEF492ED22564008A6AB5 /* NSAtrributedString+.swift in Resources */ = {isa = PBXBuildFile; fileRef = F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */; };
+		F6EDEF4C2ED22DFD008A6AB5 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */; };
+		F6EDEF4E2ED22E67008A6AB5 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */; };
+		F6EDEF502ED232A1008A6AB5 /* TestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */; };
+		F6EDEF522ED232AB008A6AB5 /* TestSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */; };
+		F6EDEF542ED232B8008A6AB5 /* TestSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +70,11 @@
 		F6EDEF0D2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
 		F6EDEF422ED222D1008A6AB5 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		F6EDEF482ED22564008A6AB5 /* NSAtrributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAtrributedString+.swift"; sourceTree = "<group>"; };
+		F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeViewController.swift; sourceTree = "<group>"; };
+		F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchViewController.swift; sourceTree = "<group>"; };
+		F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,7 @@
 		F6EDED1F2ED0DB60008A6AB5 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				F6EDEF4A2ED22D3C008A6AB5 /* Component */,
 				F6EDED232ED0DC07008A6AB5 /* Base */,
 				F6EDED222ED0DBD5008A6AB5 /* Extension */,
 				F6EDEDA62ED0DF69008A6AB5 /* Protocol */,
@@ -234,6 +245,18 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		F6EDEF4A2ED22D3C008A6AB5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F6EDEF532ED232AE008A6AB5 /* TestSaveViewController.swift */,
+				F6EDEF512ED232A5008A6AB5 /* TestSearchViewController.swift */,
+				F6EDEF4F2ED2329B008A6AB5 /* TestHomeViewController.swift */,
+				F6EDEF4D2ED22E67008A6AB5 /* MainTab.swift */,
+				F6EDEF4B2ED22DFB008A6AB5 /* Tabbar.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,17 +350,22 @@
 			files = (
 				F6EDED8F2ED0DCA9008A6AB5 /* UIView+.swift in Sources */,
 				F6EDEDA82ED0DFA0008A6AB5 /* ReuseIdentifiable.swift in Sources */,
+				F6EDEF522ED232AB008A6AB5 /* TestSearchViewController.swift in Sources */,
 				F6EDEDA52ED0DE07008A6AB5 /* UITextField+.swift in Sources */,
 				F6EDED172ED0DAA1008A6AB5 /* AppDelegate.swift in Sources */,
+				F6EDEF4E2ED22E67008A6AB5 /* MainTab.swift in Sources */,
 				F6EDED8D2ED0DC82008A6AB5 /* UIStackView+.swift in Sources */,
 				F6EDEDAA2ED0E0A6008A6AB5 /* BaseViewController.swift in Sources */,
 				F6EDED182ED0DAA1008A6AB5 /* SceneDelegate.swift in Sources */,
+				F6EDEF4C2ED22DFD008A6AB5 /* Tabbar.swift in Sources */,
 				F6EDEF132ED195CB008A6AB5 /* NetworkResult.swift in Sources */,
 				F6EDEF152ED195CB008A6AB5 /* BaseTargetType.swift in Sources */,
 				F6EDEF432ED222D1008A6AB5 /* UIFont+.swift in Sources */,
+				F6EDEF542ED232B8008A6AB5 /* TestSaveViewController.swift in Sources */,
 				F6EDEF182ED195CB008A6AB5 /* GenericResponse.swift in Sources */,
 				F6EDEF1C2ED195CB008A6AB5 /* MoyaLoggerPlugin.swift in Sources */,
 				F6EDED192ED0DAA1008A6AB5 /* ViewController.swift in Sources */,
+				F6EDEF502ED232A1008A6AB5 /* TestHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
